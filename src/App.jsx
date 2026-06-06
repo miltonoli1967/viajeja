@@ -333,7 +333,7 @@ volta: dataRetorno ? new Date(dataRetorno).toLocaleDateString('pt-BR') : 'Não i
           </h3>
 
           <label style={estiloRotulo}>Nome Completo:</label>
-          <input type="text" value={nomeCompleto} onChange={(e) => setNomeCompleto(e.target.value)} placeholder="Seu Nome Completo" style={estiloInputClean} />
+          <input type="text" value={nomeCompleto} onChange={(e) => setNomeCompleto(e.target.value)} placeholder="Seu Nome Completo" style={estiloInputClean} autoComplete="name" name="nome" />
 
           <div style={{ display: 'grid', gridTemplateColumns: isCelular ? '1fr' : '100px 1fr', gap: '8px' }}>
             <div>
@@ -347,12 +347,12 @@ volta: dataRetorno ? new Date(dataRetorno).toLocaleDateString('pt-BR') : 'Não i
             </div>
             <div>
               <label style={estiloRotulo}>Endereço Completo:</label>
-              <input type="text" value={enderecoCompleto} onChange={(e) => setEnderecoCompleto(e.target.value)} placeholder="Logradouro, número, apto" style={estiloInputClean} />
+              <input type="text" value={enderecoCompleto} onChange={(e) => setEnderecoCompleto(e.target.value)} placeholder="Logradouro, número, apto" style={estiloInputClean} autoComplete="street-address" name="endereco" />
             </div>
           </div>
 
           <label style={estiloRotulo}>E-mail de Contato:</label>
-          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="seuemail@provedor.com" style={estiloInputClean} />
+          <input type="email" value={email} onChange={(e) => setEmail(e.target.value)} placeholder="seuemail@provedor.com" style={estiloInputClean} autoComplete="email" name="email" />
 
           <label style={estiloRotulo}>Telefone Celular:</label>
           <input 
@@ -362,6 +362,8 @@ volta: dataRetorno ? new Date(dataRetorno).toLocaleDateString('pt-BR') : 'Não i
             placeholder="(21) 99999-9999" 
             maxLength="15" 
             style={estiloInputClean} 
+            autoComplete="tel"
+            name="telefone"
           />
 
           <label style={{ display: 'flex', alignItems: 'center', gap: '8px', fontSize: '0.82rem', color: '#334155', cursor: 'pointer', marginBottom: '20px' }}>
@@ -427,19 +429,19 @@ volta: dataRetorno ? new Date(dataRetorno).toLocaleDateString('pt-BR') : 'Não i
               </div>
 
               <label style={estiloRotulo}>Número do Cartão:</label>
-              <input type="text" value={numeroCartao} onChange={handleNumeroCartaoChange} placeholder="0000 0000 0000 0000" maxLength="19" style={estiloInputClean} />
+              <input type="text" value={numeroCartao} onChange={handleNumeroCartaoChange} placeholder="0000 0000 0000 0000" maxLength="19" style={estiloInputClean} autoComplete="cc-number" name="numero-cartao" />
 
               <label style={estiloRotulo}>Nome Impresso:</label>
-              <input type="text" value={nomeCartao} onChange={(e) => setNomeCartao(e.target.value.toUpperCase())} placeholder="NOME COMO ESTÁ NO CARTÃO" style={estiloInputClean} />
+              <input type="text" value={nomeCartao} onChange={(e) => setNomeCartao(e.target.value.toUpperCase())} placeholder="NOME COMO ESTÁ NO CARTÃO" style={estiloInputClean} autoComplete="cc-name" name="nome-cartao" />
 
               <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '8px' }}>
                 <div>
                   <label style={estiloRotulo}>Validade:</label>
-                  <input type="text" value={validadeCartao} onChange={handleValidadeChange} placeholder="MM/AA" maxLength="5" style={estiloInputClean} />
+                  <input type="text" value={validadeCartao} onChange={handleValidadeChange} placeholder="MM/AA" maxLength="5" style={estiloInputClean} autoComplete="cc-exp" name="validade-cartao" />
                 </div>
                 <div>
                   <label style={estiloRotulo}>CVV:</label>
-                  <input type="text" value={cvvCartao} onChange={(e) => setCvvCartao(e.target.value.replace(/\D/g, ''))} placeholder="000" maxLength="4" style={estiloInputClean} />
+                  <input type="text" value={cvvCartao} onChange={(e) => setCvvCartao(e.target.value.replace(/\D/g, ''))} placeholder="000" maxLength="4" style={estiloInputClean} autoComplete="cc-csc" name="cvv-cartao" />
                 </div>
               </div>
             </div>
