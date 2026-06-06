@@ -1,0 +1,73 @@
+:root {
+  --primary: #007bff;
+  --success: #28a745;
+  --dark: #1e293b;
+  --light: #f8fafc;
+  --text-main: #334155;
+}
+
+html, body, #root {
+  margin: 0 !important;
+  padding: 0 !important;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-height: 100vh !important;
+  background-color: #f1f5f9 !important;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/* Estilo Customizado do Header */
+.header {
+  background: linear-gradient(135deg, #0052cc, #007bff);
+  color: white;
+  padding: 3rem 1rem;
+  text-align: center;
+  border-radius: 0 0 20px 20px;
+  margin-bottom: 2rem;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.header h1 {
+  margin: 0 0 10px 0;
+  font-size: 2.2rem;
+  font-weight: 800;
+}
+
+.header p {
+  margin: 0;
+  font-size: 1.1rem;
+  opacity: 0.9;
+}
+
+/* Container de Interações */
+.form-cadastro {
+  background: white;
+  padding: 2rem;
+  border-radius: 16px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05);
+  border: 1px solid #e2e8f0;
+}
+
+/* Seção de Depoimentos */
+.reviews-section {
+  background: white;
+  padding: 2.5rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid #e2e8f0;
+  margin-top: 3rem;
+}
+
+.review-card {
+  background: white;
+  padding: 25px;
+  border-radius: 15px;
+  box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+  border: 1px solid #f1f5f9;
+}
